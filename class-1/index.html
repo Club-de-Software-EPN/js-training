@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty characters</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h1>Rick and Morty characters</h1>
+  <ul id="list">
+  </ul>
+  <script>
+    //Obtener etiquetas HTML
+    const list = document.getElementById("list");
+
+    function showData (character) {
+      //Crear etiquetas
+      const newItem = document.createElement("li");
+      const image = document.createElement("img");
+      const name = document.createElement("p");
+
+      //Agregar propiedades a las etiquetas
+      image.src = character.image;
+      image.alt = "image-"+character.id;
+
+      //Agregar clases css
+      list.classList.add("list");
+      name.classList.add("name");
+      image.classList.add("image");
+      newItem.classList.add("item")
+
+      //Agregar contenido a las etiquetas
+      name.innerHTML = character.name;
+
+      //Inyectar etiquetas
+      newItem.appendChild(name);
+      newItem.appendChild(image);
+      list.appendChild(newItem);
+    }
+
+    async function fetchData () {
+      const rawData = await fetch("https://rickandmortyapi.com/api/character");
+      const data = await rawData.json();
+      return data;
+    }
+
+    fetchData().then((data) => {
+      data.results.map((character) => {
+        showData(character);
+      });
+    })
+
+
+  </script>
+</body>
+</html>

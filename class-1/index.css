@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+  display: flex;
+  overflow: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border: 1px solid red;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.image {
+  border-radius: 30px;
+  width: 100px;
+}
