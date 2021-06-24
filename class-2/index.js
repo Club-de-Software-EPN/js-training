@@ -1,6 +1,6 @@
-//Comentario
+// Line comment
   /*
-  Comentario de bloque
+  Multiline comment
   */
 
 // Variables
@@ -8,7 +8,7 @@ const a = "hola"
 let nombre = "Juan"
 var apellido = "Jaramillo"
 
-// Tipos de datos
+// Data types
 const string = "esto es un string"
 const number = 123
 const number_2 = 1.3
@@ -24,7 +24,8 @@ const saludar = () => {
 const despedir = function () {
   
 }
-//Funciones
+
+// Functions
 function viajar () {
   console.log("Hola mundo")
 }
@@ -36,9 +37,9 @@ const saludar_2 = (nombre, apellido) => {
 viajar()
 saludar_2("Juan", "Jaramillo")
 
-// Coerción
-// Cambio de tipos de datos
-let suma = 4 + "7" // concatencación
+// Coercion
+// Change of data types
+let suma = 4 + "7" // concatenation
 typeof suma
 let multiplicación = 4*"7"
 typeof multiplicación
@@ -64,7 +65,7 @@ Boolean(["a"])
 Boolean({nombre: "juan"})
 Boolean(() => {})
 
-//Operadores lógicos
+// Logical operators
 "juan" === "juan"
 1 === "1"
 2 < 5
@@ -79,13 +80,13 @@ if (provincia) {
   console.log("bloque falso")
 }
 
-//Arrays
+// Arrays
 let frutas = ["manzana", "pera", "sandia"]
 frutas.push("durazno")
 frutas.pop()
 frutas[2]
 
-//Recorrer un array
+// Traverse an array
 frutas.map((fruta, indice) => {
   console.log(fruta)
   console.log(indice)
@@ -101,7 +102,7 @@ frutas.forEach((fruta, indice) => {
   console.log(indice)
 })
 
-//Objects
+// Objects
 const people = {
   nombre: "Juan",
   saludar: () => {
