@@ -5,47 +5,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Js Calculator</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <div>
-    <main>
-      <img src="assets/logo.png" alt="software club logo" />
+  <div class="container">
+    <main class="main">
+      <img class="logo" src="assets/logo.png" alt="software club logo" />
       <h1>Js Calculator</h1>
       <table>
         <tr>
           <td colspan="4">
-            <p>Resultado</p>
+            <p class="result" id="result"></p>
           </td>
         </tr>
         <tr>
-          <td><button>1</button></td>
-          <td><button>2</button></td>
-          <td><button>3</button></td>
-          <td><button>+</button></td>
+          <td><button onclick="add('1')">1</button></td>
+          <td><button onclick="add('2')">2</button></td>
+          <td><button onclick="add('3')">3</button></td>
+          <td><button onclick="add('+')">+</button></td>
         </tr>
         <tr>
-          <td><button>4</button></td>
-          <td><button>5</button></td>
-          <td><button>6</button></td>
-          <td><button>-</button></td>
+          <td><button onclick="add('4')">4</button></td>
+          <td><button onclick="add('5')">5</button></td>
+          <td><button onclick="add('6')">6</button></td>
+          <td><button onclick="add('-')">-</button></td>
         </tr>
         <tr>
-          <td><button>7</button></td>
-          <td><button>8</button></td>
-          <td><button>  9</button></td>
-          <td><button>*</button></td>
+          <td><button onclick="add('7')">7</button></td>
+          <td><button onclick="add('8')">8</button></td>
+          <td><button onclick="add('9')">9</button></td>
+          <td><button onclick="add('*')">*</button></td>
         </tr>
         <tr>
-          <td colspan="3"><button>0</button></td>
-          <td><button>/</button></td>
+          <td colspan="3"><button onclick="add('0')">0</button></td>
+          <td><button onclick="add('/')">/</button></td>
         </tr>
         <tr>
-          <td colspan="2"><button>AC</button></td>
-          <td><button>.</button></td>
-          <td><button>=</button></td>
+          <td colspan="2"><button class="ac" onclick="del()">AC</button></td>
+          <td><button onclick="add('.')">.</button></td>
+          <td><button onclick="calc()">=</button></td>
         </tr>
       </table>
     </main>
+    <footer>
+      <p>© 2021 <a href="https://github.com/Club-de-Software-EPN" target="_blank">EPN Software Club</a></p>
+      <span>All rights reserved</span>
+    </footer>
   </div>
+  <script src="./index.js">
+  </script>
 </body>
 </html>
