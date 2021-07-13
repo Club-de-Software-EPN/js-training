@@ -1,0 +1,9 @@
+.clock__container {
+  border-radius: 30px;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.322);
+}
+
+.clock__time {
+  font-size: 50px;
+}

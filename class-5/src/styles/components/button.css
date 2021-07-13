@@ -1,0 +1,8 @@
+.button {
+  min-height: 50px;
+  padding: 0 10px;
+  background-color: rgba(240, 248, 255, 0.322);
+  color: aliceblue;
+  border: none;
+  border-radius: 15px;
+}
