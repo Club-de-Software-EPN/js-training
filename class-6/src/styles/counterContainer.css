@@ -1,0 +1,11 @@
+.counter__container {
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.205);
+  border-radius: 20px;
+  min-width: 250px;
+}
+
+.counter__display {
+  font-size: 40px;
+  margin: 20px 0;
+}
