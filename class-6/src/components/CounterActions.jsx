@@ -2,11 +2,23 @@ import React from 'react';
 import Button from './Button';
 import '../styles/counterActions.css';
 
-const CounterActions = () => {
+const CounterActions = ({setValue}) => {
+  const add = () => {
+    setValue((prevState) => {
+      return prevState + 1;
+    });
+  }
+
+  const min = () => {
+    setValue((prevState) => {
+      return prevState - 1;
+    });
+  }
+
   return (
     <div className="counterActions__container">
-      <Button text="+"/>
-      <Button text="-"/>
+      <Button onClick={add} text="+"/>
+      <Button onClick={min} text="-"/>
     </div>
   );
 }

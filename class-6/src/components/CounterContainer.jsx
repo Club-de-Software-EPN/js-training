@@ -3,11 +3,11 @@ import CounterActions from './CounterActions';
 
 import '../styles/counterContainer.css';
 
-const CounterContainer = () => {
+const CounterContainer = ({value, setValue}) => {
   return (
     <div className="counter__container">
-      <p className="counter__display">1</p>
-      <CounterActions />
+      <p className="counter__display">{value}</p>
+      <CounterActions setValue={setValue}/>
     </div>
   );
 }
